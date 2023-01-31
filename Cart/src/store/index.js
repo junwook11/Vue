@@ -10,9 +10,6 @@ export default new Vuex.Store({
   getters: {
   },
   mutations: {
-    GO_TO_MAIN(){
-      this.$router.push('/main')
-    }
   },
   actions: {
   },

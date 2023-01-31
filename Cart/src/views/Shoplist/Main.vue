@@ -1,20 +1,21 @@
 <template>
-  <div>
-    <b-button variant="danger" @click="gotoMain">GoBack</b-button>
+  <div id="app">
+    <b-button variant="danger" @click="gotoMain" id="back-button">GoBack</b-button>
     Shopping Main
-    
-    <div v-for="(list,index) in lists" :key="index">
-      <ShopBox></ShopBox>
+    <div id="s-box">
+      <div v-for="(list,index) in lists" :key="index" id="inner-s-box">
+        <ShopBox></ShopBox>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import ShopBox from '../components/ShoppingBox.vue'
+import ShopBox from '@/components/ShoppingBox.vue'
 export default {
   data(){
     return {
-      lists:[1,2,3]
+      lists:[1,2]
     }
   },
   methods:{
@@ -30,5 +31,19 @@ export default {
 </script>
 
 <style>
-
+#app{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+#s-box{
+  display: flex;
+}
+#back-button{
+  position: absolute;
+  top: 0;
+}
+#inner-s-box{
+  width: 30%;
+}
 </style>
