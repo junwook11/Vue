@@ -6,6 +6,6 @@ const request = axios.create({
 
 export const api = {
     jsonplaceholder : {
-        
+        findAll:() => request.get("/todos")
     }
 }

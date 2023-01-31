@@ -6,7 +6,7 @@
         style="position:relative; height:300px; overflow-y:scroll;" 
       >
       <div v-for="(menu,index) in menus" :key="index">
-        <shopping-menu :menuName="menu.name" :menuId="menu.id"></shopping-menu>
+        <shopping-menu :menuName="menu.title" :menuId="menu.id"></shopping-menu>
       </div>
       </b-card-body>
   </div>
@@ -14,19 +14,17 @@
 
 <script>
 import ShoppingMenu from './ShoppingMenu.vue'
+import {api} from '../utils/axios'
 export default {
   components: { ShoppingMenu },
   data(){
     return{
-      menus:[
-        {id:1, name:"a"},
-        {id:2, name:"b"},
-        {id:3, name:"c"},
-        {id:4, name:"d"},
-        {id:5, name:"e"},
-        
-      ]
+      menus:[]
     }
+  },
+  async created(){
+    const result = await api.jsonplaceholder.findAll()
+    this.menus = result.data
   }
 }
 </script>
