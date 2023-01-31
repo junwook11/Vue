@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>BMI Cal</h1>
+    <div id="app">
+        Heights: <input v-model="hh">
+        <br>
+        Weights: <input v-model="ww">
+        <br>
+        <button @click="calBmi">button</button>
+        <br>
+        {{result}}
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.min.js"></script>
+    <script>
+
+
+        const app = new Vue({
+            el: "#app",
+            data() {
+                return {
+                    ww:"",
+                    hh:"",
+                    result:"",
+                }
+            },
+            methods:{
+                calBmi(){
+                    let H = Number(this.hh)/100;
+                    let W = Number(this.ww);
+                    console.log(H)
+                    console.log(W)
+
+                    const bmi = W / (H * H);
+                    console.log(bmi)
+                    if (bmi >= 25){
+                        this.result = "Fat"
+                    }else if (bmi >= 23){
+                        this.result = "Over"
+                    }else if (bmi >= 18.5){
+                        this.result = "Normal"
+                    }else if (bmi >= 0) {
+                        this.result = "Under"
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
