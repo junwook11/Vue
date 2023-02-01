@@ -7,9 +7,9 @@
       </div>
       <div id="login">
         <div>
-          <p>ID:</p> <input type="text">
+          <p>ID:</p> <input type="email">
           <br>
-          <p>PSWD:</p> <input type="text">
+          <p>PSWD:</p> <input type="passwd">
         </div>
         <button @click="gotoHome">Login</button>
       </div>

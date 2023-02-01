@@ -6,27 +6,29 @@
         style="position:relative; height:500px; margin: 20px; overflow-y:scroll;" 
       >
       <div v-for="(menu,index) in menus" :key="index" id="shop-box">
-        <ShoppingMenu :menuName="menu.title" :menuId="menu.id" :showDel="showDel" id="shop-menu"></ShoppingMenu>
+        <shopping-menu :CartName="menu.title" :CartId="menu.id" id="shop-menu"></shopping-menu>
       </div>
     </b-card-body>
   </div>
 </template>
 
 <script>
-import ShoppingMenu from './ShoppingMenu.vue'
+import CartListMenu from './CartListMenu.vue';
 import {api} from '../utils/axios'
 export default {
-  props:["showDel"],
-  components: { ShoppingMenu },
-  data(){
-    return{
-      menus:[]
-    }
-  },
-  async created(){
+    data(){
+        return{
+            menus:[]
+        }
+    },
+    components:{
+        CartListMenu,
+    },
+    async created(){
     const result = await api.jsonplaceholder.findAll()
     this.menus = result.data
   }
+
 }
 </script>
 

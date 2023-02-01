@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="container">
-      <b-button variant="outline-secondary" id="bb">AD</b-button>
+      <Clock></Clock>
       <b-button variant="outline-secondary" @click="gotoMap" class="wide-bb">Map</b-button>
       <b-button variant="outline-secondary" @click="gotoList" id="bb">List</b-button>
     </div>
@@ -21,7 +21,9 @@
 </template>
 
 <script>
+import Clock from '@/components/Clock.vue'
 export default {
+  components: { Clock },
   methods: {
     gotoMap() {
       this.$router.push("/map")
