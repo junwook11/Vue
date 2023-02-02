@@ -1,11 +1,13 @@
 <template>
-  <div>
+  <div id="container">
     Shop Compare
-    <div>
-      <!-- <ShoppingBox></ShoppingBox> -->
-    </div>
-    <div>
-      <!-- <CartList></CartList> -->
+    <div id="com-box">
+      <div id="s-box">
+        <ShoppingBox :compMenu="true"></ShoppingBox>
+      </div>
+      <div id="c-list">
+        <CartList></CartList>
+      </div>
     </div>
   </div>
 </template>
@@ -21,5 +23,17 @@ export default {
 </script>
 
 <style>
-
+#container{
+  width: 100%;
+}
+#com-box{
+  display: flex;
+  width: 100%;
+}
+#s-box{
+  width: 50%;
+}
+#c-list{
+  width: 50%;
+}
 </style>

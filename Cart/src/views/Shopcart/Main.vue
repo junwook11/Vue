@@ -8,7 +8,7 @@
 
 <script>
 import CartBox from '@/components/CartBox.vue'
-import BackMain from '../Buttons/BackMain.vue'
+import BackMain from '@/components/Buttons/BackMain.vue'
 export default {
     methods:{
     gotoMain(){

@@ -1,5 +1,5 @@
 <template>
-  <div id="name-box">
+  <b-list-group-item id="name-box">
     <div id="menu-id">
       {{ CartId }}
     </div> 
@@ -7,7 +7,7 @@
       {{ CartName }}
     </div>
 
-  </div>
+  </b-list-group-item>
 </template>
 
 <script>

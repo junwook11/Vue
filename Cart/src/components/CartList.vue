@@ -5,8 +5,8 @@
         ref="content"
         style="position:relative; height:500px; margin: 20px; overflow-y:scroll;" 
       >
-      <div v-for="(menu,index) in menus" :key="index" id="shop-box">
-        <shopping-menu :CartName="menu.title" :CartId="menu.id" id="shop-menu"></shopping-menu>
+      <div v-for="(cart,index) in $store.state.carts" :key="index" id="shop-box">
+        <CartListMenu :CartName="cart.title" :CartId="cart.id" id="shop-menu"></CartListMenu>
       </div>
     </b-card-body>
   </div>
@@ -16,18 +16,10 @@
 import CartListMenu from './CartListMenu.vue';
 import {api} from '../utils/axios'
 export default {
-    data(){
-        return{
-            menus:[]
-        }
-    },
     components:{
         CartListMenu,
     },
-    async created(){
-    const result = await api.jsonplaceholder.findAll()
-    this.menus = result.data
-  }
+
 
 }
 </script>

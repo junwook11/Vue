@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import BackList from '../Buttons/BackList.vue'
+import BackList from '@/components/Buttons/BackList.vue'
 import ShopBox from '@/components/ShoppingBox.vue'
 export default {
   components:{

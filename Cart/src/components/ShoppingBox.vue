@@ -1,22 +1,21 @@
 <template>
-  <div id="menubox">
+  <b-list-group id="menubox">
     <b-card-body
         id="nav-scroller"
         ref="content"
-        style="position:relative; height:500px; margin: 20px; overflow-y:scroll;" 
       >
       <div v-for="(menu,index) in menus" :key="index" id="shop-box">
-        <ShoppingMenu :menuName="menu.title" :menuId="menu.id" :showDel="showDel" id="shop-menu"></ShoppingMenu>
+        <ShoppingMenu :compMenu="compMenu" :menuName="menu.title" :menuId="menu.id" :showDel="showDel" id="shop-menu"></ShoppingMenu>
       </div>
     </b-card-body>
-  </div>
+  </b-list-group>
 </template>
 
 <script>
 import ShoppingMenu from './ShoppingMenu.vue'
 import {api} from '../utils/axios'
 export default {
-  props:["showDel"],
+  props:["showDel","compMenu"],
   components: { ShoppingMenu },
   data(){
     return{
@@ -31,6 +30,14 @@ export default {
 </script>
 
 <style>
+#nav-scroller{
+  position:relative; 
+  height:500px; 
+  margin: 20px; 
+  overflow-y:scroll;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
 #menubox{
   display: flex;
   flex-direction: column;

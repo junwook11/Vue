@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import BackMain from '../Buttons/BackMain.vue'
+import BackMain from '@/components/Buttons/BackMain.vue'
 export default {
     methods:{
     gotoMain(){

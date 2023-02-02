@@ -16,7 +16,7 @@
 
 <script>
 import ShopBox from '@/components/ShoppingBox.vue'
-import BackMain from '../Buttons/BackMain.vue'
+import BackMain from '@/components/Buttons/BackMain.vue'
 export default {
   data(){
     return {
@@ -28,7 +28,7 @@ export default {
   },
   methods:{
     gotoDetail(data){
-      this.$router.push(`/list/${data+1}`)
+      this.$router.push(`/list/detail/${data+1}`)
       this.$store.commit("SET_LIST_NUM", data+1)
     }
   }
@@ -52,7 +52,7 @@ export default {
   top: 0;
 }
 #inner-s-box{
-  min-width: 40%;
+  min-width: 60%;
 }
 #container{
   overflow-x: scroll;

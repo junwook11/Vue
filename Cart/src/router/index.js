@@ -60,7 +60,7 @@ const routes = [
     component: ListMain
   },
   {
-    path:"/list/:id",
+    path:"/list/detail/:id",
     name:"list-detail",
     component: ListDetail
   },

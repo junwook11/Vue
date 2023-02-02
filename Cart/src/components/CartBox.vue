@@ -1,7 +1,7 @@
 <template>
   <div>
     <h4>CartMenu</h4>
-    <div id="cart-box" style="height:500px">
+    <div id="cart-box" style="height:600px; border: 1px solid grey; padding: 10px;">
         <div v-for="(user,index) in users" :key="index" id="card">
             <CartMenu :Name="user.username" :Id="user.id" :img="Imgs[user.id].url"></CartMenu>
             <div>{{ index }}</div>
