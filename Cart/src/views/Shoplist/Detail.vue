@@ -7,15 +7,17 @@
       <ShopBox :showDel="true"></ShopBox>
     </div>
     <button @click="moveCompare">button</button>
+    <BarcodeInput></BarcodeInput>
   </div>
 </template>
 
 <script>
 import BackList from '@/components/Buttons/BackList.vue'
 import ShopBox from '@/components/ShoppingBox.vue'
+import BarcodeInput from '@/components/BarcodeInput.vue'
 export default {
   components:{
-    BackList,ShopBox
+    BackList,ShopBox,BarcodeInput
   },
   methods:{
     moveCompare(){

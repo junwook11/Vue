@@ -16,6 +16,7 @@
         </div>
       </div>
     </div>
+    <BarcodeInput></BarcodeInput>
   </div>
 </template>
 
@@ -24,10 +25,12 @@ import MartMap from "@/components/MartMap.vue"
 import ShoppingBox from '@/components/ShoppingBox.vue'
 import GoCart from '@/components/Buttons/GoCart.vue'
 import MapToBack from '@/components/Buttons/MapToBack.vue'
+import BarcodeInput from '@/components/BarcodeInput.vue'
 export default {
   components:{
     MartMap,MapToBack,
-    ShoppingBox,GoCart
+    ShoppingBox,GoCart,
+    BarcodeInput
   }
 }
 </script>

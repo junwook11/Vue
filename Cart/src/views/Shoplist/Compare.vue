@@ -9,15 +9,17 @@
         <CartList></CartList>
       </div>
     </div>
+    <BarcodeInput></BarcodeInput>
   </div>
 </template>
 
 <script>
 import ShoppingBox from '@/components/ShoppingBox.vue';
 import CartList from '@/components/CartList.vue';
+import BarcodeInput from '@/components/BarcodeInput.vue'
 export default {
   components:{
-    CartList,ShoppingBox
+    CartList,ShoppingBox,BarcodeInput
   }
 }
 </script>

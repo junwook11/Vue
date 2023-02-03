@@ -3,12 +3,14 @@
     <BackMain id="back-button"></BackMain>
     Shop Cart
     <CartBox></CartBox>
+    <BarcodeInput></BarcodeInput>
   </div>
 </template>
 
 <script>
 import CartBox from '@/components/CartBox.vue'
 import BackMain from '@/components/Buttons/BackMain.vue'
+import BarcodeInput from '@/components/BarcodeInput.vue'
 export default {
     methods:{
     gotoMain(){
@@ -16,7 +18,8 @@ export default {
     }
   },
   components:{
-    BackMain,CartBox
+    BackMain,CartBox,
+    BarcodeInput
   }
 }
 </script>

@@ -17,13 +17,15 @@
       <b-button variant="outline-secondary" @click="gotoMap" class="wide-bb">Map</b-button>
       <b-button variant="outline-secondary" @click="gotoList" id="bb">List</b-button>
     </div>
+    <BarcodeInput></BarcodeInput>
   </div>
 </template>
 
 <script>
 import Clock from '@/components/Clock.vue'
+import BarcodeInput from '@/components/BarcodeInput.vue'
 export default {
-  components: { Clock },
+  components: { Clock,BarcodeInput },
   methods: {
     gotoMap() {
       this.$router.push("/map")

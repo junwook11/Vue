@@ -9,7 +9,7 @@
           <ShopBox :showDel="false"></ShopBox>
         </div>
       </div>
-
+      <BarcodeInput></BarcodeInput>
     </div>
   </div>
 </template>
@@ -17,6 +17,7 @@
 <script>
 import ShopBox from '@/components/ShoppingBox.vue'
 import BackMain from '@/components/Buttons/BackMain.vue'
+import BarcodeInput from '@/components/BarcodeInput.vue'
 export default {
   data(){
     return {
@@ -24,7 +25,7 @@ export default {
     }
   },
   components:{
-    ShopBox,BackMain
+    ShopBox,BackMain,BarcodeInput
   },
   methods:{
     gotoDetail(data){
