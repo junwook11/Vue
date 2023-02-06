@@ -50,6 +50,7 @@ export default {
 }
 #back-button{
   position: absolute;
+  left: 0;
   top: 0;
 }
 #inner-s-box{

@@ -1,14 +1,12 @@
 <template>
-  <div>
-    <b-button variant="danger" @click="gotoMain" id="back-button">GoBack</b-button>
-  </div>
+    <b-button @click="gotoMain">GoBack</b-button>
 </template>
 
 <script>
 export default {
     methods:{
     gotoMain(){
-      this.$router.push('/main')
+      this.$router.go(-1)
     }
   },
 }

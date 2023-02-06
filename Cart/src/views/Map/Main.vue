@@ -8,7 +8,7 @@
       <div>
         <div id="buttons">
           <GoCart style="width:50%"></GoCart>
-          <MapToBack style="width:50%"></MapToBack>
+          <BackMain style="width:50%"></BackMain>
         </div>
         <div>
           List{{ $store.state.list }}
@@ -24,11 +24,11 @@
 import MartMap from "@/components/MartMap.vue"
 import ShoppingBox from '@/components/ShoppingBox.vue'
 import GoCart from '@/components/Buttons/GoCart.vue'
-import MapToBack from '@/components/Buttons/MapToBack.vue'
+import BackMain from "@/components/Buttons/BackMain.vue"
 import BarcodeInput from '@/components/BarcodeInput.vue'
 export default {
   components:{
-    MartMap,MapToBack,
+    MartMap,BackMain,
     ShoppingBox,GoCart,
     BarcodeInput
   }

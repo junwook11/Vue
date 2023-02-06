@@ -24,13 +24,11 @@ export default {
     },    
     created(){
         var arr = this.$store.state.carts
-        console.log(arr[2].title)
         for(var i in arr){
           if(arr[i].title === this.menuName)
             this.list =  true
         
        }
-       console.log(this.list)
     }
 }
 

@@ -513,12 +513,10 @@
       
       const table = document.querySelector("table")
       const block = table.getElementsByTagName("td")
-      console.log(block)
       const now = 20 + (this.now_x * 20) + this.now_y
       const Bea_A = 20 + (this.AP1.x * 20) + this.AP1.y
       const Bea_B = 20 + (this.AP2.x * 20) + this.AP2.y
       const Bea_C = 20 + (this.AP3.x * 20) + this.AP3.y
-      console.log(now)
       block[now].classList.add("here")
       block[Bea_A].classList.add("beacon")
       block[Bea_B].classList.add("beacon")
