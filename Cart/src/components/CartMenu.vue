@@ -10,7 +10,7 @@
     class="mb-2 card-margin"
   >
     <b-card-text>
-        {{ img }}
+        {{ Name }}
     </b-card-text>
   </b-card>
   </div>

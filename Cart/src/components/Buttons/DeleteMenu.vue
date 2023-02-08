@@ -1,24 +1,18 @@
 <template>
   <div>
-    <b-button variant="danger">X</b-button>
-    <div v-if="modal"></div>
+    <b-button variant="danger" @click="$emit('showModal',true)">X</b-button>
   </div>
 </template>
 
 <script>
-import {api} from '@/utils/axios'
 export default {
   data() {
       return {
-        modalShow: false
+        modalShow: true
       }
     },
     props:["menuId"],
-    methods:{
-        deleteMenu(menuId){
-            api.jsonplaceholder.delMenu(menuId)
-        }
-    }
+
 }
 </script>
 

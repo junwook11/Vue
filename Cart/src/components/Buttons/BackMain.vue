@@ -1,5 +1,5 @@
 <template>
-    <b-button @click="gotoMain">GoBack</b-button>
+    <b-button @click="gotoMain" id="go-back">GoBack</b-button>
 </template>
 
 <script>
@@ -13,5 +13,7 @@ export default {
 </script>
 
 <style>
-
+#go-back{
+  height: 100px;
+}
 </style>

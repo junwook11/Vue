@@ -1,8 +1,10 @@
 <template>
-  <div id="app">
-    <div class="container">
-      <b-button variant="outline-secondary" id="bb">AD</b-button>
-      <b-button variant="outline-secondary" id="bb">Parking</b-button>
+  <div id="main-container">
+    <div class="buttons-container">
+      <div id="ad-container">
+        <AD></AD>
+      </div>
+        <b-button variant="outline-secondary" id="bb">Parking</b-button>
       <div class="inner-container">
         <div id="bb-2" class="b-b-b">
           <b-button variant="outline-secondary" id="bb-3" @click="gotocart">Cart</b-button>
@@ -12,8 +14,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <Clock></Clock>
+    <div class="buttons-container">
       <b-button variant="outline-secondary" @click="gotoMap" class="wide-bb">Map</b-button>
       <b-button variant="outline-secondary" @click="gotoList" id="bb">List</b-button>
     </div>
@@ -24,8 +25,9 @@
 <script>
 import Clock from '@/components/Clock.vue'
 import BarcodeInput from '@/components/BarcodeInput.vue'
+import AD from '@/components/AD.vue'
 export default {
-  components: { Clock,BarcodeInput },
+  components: { Clock,BarcodeInput,AD },
   methods: {
     gotoMap() {
       this.$router.push("/map")
@@ -45,25 +47,23 @@ export default {
 </script>
 
 <style>
-.container {
+.buttons-container {
+  height: 50vh;
   display: flex;
   justify-content: space-between;
 }
-
+#ad-container{
+  width:600px;
+  height: 340px;
+}
 .inner-container {
   display: flex;
   flex-direction: column;
 }
 
-#app {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 #bb {
-  flex-grow: 1;
+  flex-grow: 2;
+  padding : -10px
 }
 
 #bb-2 {

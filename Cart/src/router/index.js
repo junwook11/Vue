@@ -75,12 +75,12 @@ const routes = [
     component: RecipeMain
   },
   {
-    path:"/recipe/:id",
+    path:"/recipe/detail/:id",
     name:"recipe-detail",
     component: RecipeDetail
   },
   {
-    path:"/recipe/list",
+    path:"/recipe/list/:id",
     name:"recipe-list",
     component: RecipeList
   },

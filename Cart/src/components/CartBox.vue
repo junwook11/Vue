@@ -21,7 +21,7 @@ export default {
     }
   },
   async created(){
-    const image = await api.jsonplaceholder.findImg()
+    var image = await api.jsonplaceholder.findImg()
     this.Imgs = image.data
   }
 }
